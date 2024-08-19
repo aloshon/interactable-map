@@ -4,7 +4,8 @@ document.addEventListener('mouseover', function (e) {
   if (e.target.tagName === 'path') {
 		console.log(e.target);
 		console.log(e.target.dataset);
-		console.log(e.target.fill);
+		console.log(e.target.class);
+		console.log(e.target.opacity);
     let content = e.target.dataset.name;
     document.getElementById("details-box").innerHTML = content;
     document.getElementById("details-box").style.opacity = "100%";
@@ -14,6 +15,7 @@ document.addEventListener('mouseover', function (e) {
   }
 });
 
+// logic for making the details box stay under the mouse cursor
 window.onmousemove = function (e) {
   let x = e.clientX;
   let y = e.clientY;
